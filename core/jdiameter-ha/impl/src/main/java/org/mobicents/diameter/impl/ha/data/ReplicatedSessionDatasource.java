@@ -118,7 +118,7 @@ public class ReplicatedSessionDatasource implements ISessionDatasource, DataRemo
 
   public ReplicatedSessionDatasource(IContainer container) {
     this(container, new LocalDataSource(), ReplicatedSessionDatasource.class.getClassLoader().getResource(CLUSTER_DS_DEFAULT_FILE) == null ?
-        "config/" + CLUSTER_DS_DEFAULT_FILE : CLUSTER_DS_DEFAULT_FILE);
+        "../config/" + CLUSTER_DS_DEFAULT_FILE : CLUSTER_DS_DEFAULT_FILE);
   }
 
   public ReplicatedSessionDatasource(IContainer container, ISessionDatasource localDataSource, String cacheConfigFilename) {
